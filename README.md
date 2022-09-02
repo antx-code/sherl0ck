@@ -6,7 +6,7 @@ Hunt down social media accounts by username across social networks, which based 
 
 **Sherl0ck** collect a dossier on a person **by username only**, checking for accounts on a huge number of sites and gathering all the available information from web pages. No API keys required. Sherl0ck is an easy-to-use and powerful fork of [Maigret](https://github.com/soxoj/maigret).
 
-Currently supported more than 2500 sites ([full list](https://github.com/soxoj/maigret/blob/main/sites.md)), search is launched against 500 popular sites in descending order of popularity by default. Also supported checking of Tor sites, I2P sites, and domains (via DNS resolving).
+Currently supported more than 2500 sites ([full list](https://github.com/antx-code/sherl0ck/blob/main/sites.md)), search is launched against 500 popular sites in descending order of popularity by default. Also supported checking of Tor sites, I2P sites, and domains (via DNS resolving).
 
 ## Main features
 
@@ -16,7 +16,7 @@ Currently supported more than 2500 sites ([full list](https://github.com/soxoj/m
 * Censorship and captcha detection
 * Requests retries
 
-See full description of Maigret features [in the maigret project documentation](https://maigret.readthedocs.io/en/latest/features.html).
+See full description of Maigret features [in the Maigret project documentation](https://maigret.readthedocs.io/en/latest/features.html).
 
 ## Installation
 
