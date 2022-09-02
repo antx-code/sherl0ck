@@ -2,8 +2,8 @@
 
 __title__ = 'Sherl0ck'
 __package__ = 'sherl0ck'
-__author__ = 'antx-soc'
-__author_email__ = 'wanglei@socmap.net'
+__author__ = 'antx-code'
+__author_email__ = 'wkaifeng2007@163.com'
 
 
 from .__version__ import __version__

@@ -2,7 +2,7 @@
 name = "sherl0ck"
 version = "0.1.0"
 description = ""
-authors = ["antx-soc <wanglei@socmap.net>"]
+authors = ["antx-code <wkaifeng2007@163.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
