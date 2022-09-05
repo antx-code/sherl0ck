@@ -16,9 +16,9 @@ from argparse import ArgumentParser, RawDescriptionHelpFormatter
 
 import tqdm.asyncio
 
-from sherl0ck.maigret import get_response, site_self_check
-from sherl0ck.sites import MaigretSite, MaigretDatabase, MaigretEngine
-from sherl0ck.utils import CaseConverter
+from maigret.maigret import get_response, site_self_check
+from maigret.sites import MaigretSite, MaigretDatabase, MaigretEngine
+from maigret.utils import CaseConverter
 
 
 async def check_engine_of_site(site_name, sites_with_engines, future, engine_name, semaphore, logger):
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     parser = ArgumentParser(formatter_class=RawDescriptionHelpFormatter
                             )
     parser.add_argument("--base","-b", metavar="BASE_FILE",
-                        dest="base_file", default="sherl0ck/resources/data.json",
+                        dest="base_file", default="maigret/resources/data.json",
                         help="JSON file with sites data to update.")
 
     parser.add_argument('--engine', '-e', help='check only selected engine', type=str)

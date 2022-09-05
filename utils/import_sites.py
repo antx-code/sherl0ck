@@ -7,9 +7,9 @@ import tqdm.asyncio
 from mock import Mock
 import requests
 
-from sherl0ck.maigret import *
-from sherl0ck.result import QueryStatus
-from sherl0ck.sites import MaigretSite
+from maigret.maigret import *
+from maigret.result import QueryStatus
+from maigret.sites import MaigretSite
 
 URL_RE = re.compile(r"https?://(www\.)?")
 TIMEOUT = 200
@@ -93,7 +93,7 @@ if __name__ == '__main__':
     parser = ArgumentParser(formatter_class=RawDescriptionHelpFormatter
                             )
     parser.add_argument("--base", "-b", metavar="BASE_FILE",
-                        dest="base_file", default="sherl0ck/resources/data.json",
+                        dest="base_file", default="maigret/resources/data.json",
                         help="JSON file with sites data to update.")
 
     parser.add_argument("--add-engine", dest="add_engine", help="Additional engine to check")

@@ -5,13 +5,13 @@ from typing import List
 
 SETTINGS_FILES_PATHS = [
     path.join(path.dirname(path.realpath(__file__)), "resources/settings.json"),
-    '~/.sherl0ck/settings.json',
+    '~/.maigret/settings.json',
     path.join(os.getcwd(), 'settings.json'),
 ]
 
 
 class Settings:
-    # main sherl0ck setting
+    # main maigret setting
     retries_count: int
     sites_db_path: str
     timeout: int

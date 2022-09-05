@@ -1,6 +1,6 @@
 import asyncio
 from loguru import logger
-from sherl0ck.maigret import main
+from maigret.maigret import main
 import json
 import os
 import sys

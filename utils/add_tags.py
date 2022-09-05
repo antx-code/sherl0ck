@@ -2,8 +2,8 @@
 import random
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
 
-from sherl0ck.maigret import MaigretDatabase
-from sherl0ck.submit import Submitter
+from maigret.maigret import MaigretDatabase
+from maigret.submit import Submitter
 
 
 def update_tags(site):
@@ -34,7 +34,7 @@ if __name__ == '__main__':
     parser = ArgumentParser(formatter_class=RawDescriptionHelpFormatter
                             )
     parser.add_argument("--base","-b", metavar="BASE_FILE",
-                        dest="base_file", default="sherl0ck/resources/data.json",
+                        dest="base_file", default="maigret/resources/data.json",
                         help="JSON file with sites data to update.")
     parser.add_argument("--name", help="Name of site to check")
 

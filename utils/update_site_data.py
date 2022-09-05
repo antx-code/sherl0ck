@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
 
-from sherl0ck.maigret import MaigretDatabase
+from maigret.maigret import MaigretDatabase
 
 RANKS = {str(i):str(i) for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 50, 100, 500]}
 RANKS.update({
@@ -71,7 +71,7 @@ if __name__ == '__main__':
     parser = ArgumentParser(formatter_class=RawDescriptionHelpFormatter
                             )
     parser.add_argument("--base","-b", metavar="BASE_FILE",
-                        dest="base_file", default="sherl0ck/resources/data.json",
+                        dest="base_file", default="maigret/resources/data.json",
                         help="JSON file with sites data to update.")
 
     parser.add_argument('--with-rank', help='update with use of local data only', action='store_true')
