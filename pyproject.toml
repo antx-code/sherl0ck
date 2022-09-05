@@ -1,8 +1,13 @@
 [tool.poetry]
 name = "sherl0ck"
 version = "0.1.0"
-description = ""
+description = "Hunt down social media accounts by username across social networks, which based on maigret and sherlock project."
 authors = ["antx-code <wkaifeng2007@163.com>"]
+
+[[tool.poetry.source]]
+name = "aliyun"
+url = "https://mirrors.aliyun.com/pypi/simple"
+default = true
 
 [tool.poetry.dependencies]
 python = "^3.8"
