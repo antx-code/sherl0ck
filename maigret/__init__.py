@@ -1,7 +1,7 @@
 """Sherl0ck"""
 
 __title__ = 'Sherl0ck'
-__package__ = 'sherl0ck'
+__package__ = 'maigret'
 __author__ = 'antx-code'
 __author_email__ = 'wkaifeng2007@163.com'
 
