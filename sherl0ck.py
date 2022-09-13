@@ -27,10 +27,10 @@ def run(targets):
     usernames = [targets] if isinstance(targets, str) else targets
     try:
         if sys.version_info.minor >= 10:
-            asyncio.run(main(usernames))
+            asyncio.run(main())
         else:
             loop = asyncio.get_event_loop()
-            loop.run_until_complete(main(usernames))
+            loop.run_until_complete(main())
     except KeyboardInterrupt:
         print('Sherl0ck is interrupted.')
         sys.exit(1)
@@ -42,7 +42,7 @@ def dia(targets):
     logger.success('Using Sherl0ck mode to hunter accounts')
     results = []
     usernames = [targets] if isinstance(targets, str) else targets
-    asyncio.run(main(usernames))
+    asyncio.run(main())
     for username in usernames:
         results.append(json_result(username))
     return results

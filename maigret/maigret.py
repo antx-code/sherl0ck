@@ -112,7 +112,7 @@ def extract_ids_from_results(results: QueryResultWrapper, db: MaigretDatabase) -
     return ids_results
 
 
-def setup_arguments_parser(settings: Settings, targets):
+def setup_arguments_parser(settings: Settings):
     from aiohttp import __version__ as aiohttp_version
     from requests import __version__ as requests_version
     from socid_extractor import __version__ as socid_version
@@ -137,7 +137,6 @@ def setup_arguments_parser(settings: Settings, targets):
         "username",
         nargs='*',
         metavar="USERNAMES",
-        default=targets,
         help="One or more usernames to search by.",
     )
     parser.add_argument(
@@ -215,7 +214,8 @@ def setup_arguments_parser(settings: Settings, targets):
         action="append",
         metavar='IGNORED_IDS',
         dest="ignore_ids_list",
-        default=settings.ignore_ids_list,
+        # default=settings.ignore_ids_list,
+        default=["dia","run"]
         help="Do not make search by the specified username or other ids.",
     )
     # reports options
@@ -457,7 +457,7 @@ def setup_arguments_parser(settings: Settings, targets):
     return parser
 
 
-async def main(targets: list):
+async def main():
     # Logging
     log_level = logging.ERROR
     logging.basicConfig(
@@ -476,7 +476,7 @@ async def main(targets: list):
         logger.error(err)
         sys.exit(3)
 
-    arg_parser = setup_arguments_parser(settings, targets)
+    arg_parser = setup_arguments_parser(settings)
     args = arg_parser.parse_args()
 
     # Re-set loggging level based on args
